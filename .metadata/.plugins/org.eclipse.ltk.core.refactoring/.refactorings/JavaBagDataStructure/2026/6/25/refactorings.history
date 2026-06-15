@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename compilation unit &apos;BagPackage.BagT.java&apos; to &apos;Bag.java&apos;&#x0A;- Original project: &apos;JavaBagDataStructure&apos;&#x0A;- Original element: &apos;BagPackage.BagT.java&apos;&#x0A;- Renamed element: &apos;BagPackage.Bag.java&apos;" description="Rename compilation unit &apos;BagT.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;BagPackage{BagT.java" name="Bag.java" references="false" stamp="1781480467281" version="1.0"/>&#x0A;
