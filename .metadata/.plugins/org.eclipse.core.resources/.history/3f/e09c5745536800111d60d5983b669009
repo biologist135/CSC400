@@ -1,0 +1,27 @@
+package bagPackage;
+
+public class BagTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Bag<String> groceryBag = new Bag<>();
+		
+		groceryBag.add("Apple");
+		groceryBag.add("Banana");
+		groceryBag.add("Apple");
+		groceryBag.add("Orange");
+		groceryBag.add("Banana");
+		groceryBag.add("Apple");
+		
+		System.out.println("Oribinal bag:");
+		groceryBag.printBag();
+		
+		System.out.println("Contains Apple? " + groceryBag.contains("Apple"));
+		System.out.println("Contains Grapes? " + groceryBag.contains("Grapes"));
+		System.out.println("Contains Orange? " + groceryBag.contains("Orange"));
+		
+		System.out.println("");
+			
+	}
+
+}

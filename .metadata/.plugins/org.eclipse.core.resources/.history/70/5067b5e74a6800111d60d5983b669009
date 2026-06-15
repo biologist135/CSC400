@@ -1,0 +1,67 @@
+package BagPackage;
+
+public class Bag<T> {
+	private Object[] bagArray;
+	
+	public Bag() {
+		bagArray = new Object[0];
+		
+	}
+	
+	public void add(T item) {
+		Object[] tempArray = new Object[bagArray.length + 1];
+		
+		for (int i = 0; i < bagArray.length; i++) {
+			tempArray[i] = bagArray[i];
+		}
+		tempArray[tempArray.length - 1] = item;
+		
+		bagArray = tempArray;
+	}
+	
+	public void remove (T item) {
+		if (contains(item)) {
+			Object[] tempArray = new Object[bagArray.length -1];
+			int currIndex = 0;
+			boolean removed = false;
+			
+			for (int i = 0; i < bagArray.length; i++) {
+				if(!removed && bagArray[i].equals(item)) {
+					removed = true;
+				}
+				else {
+					tempArray[currIndex] = bagArray[i];
+					currIndex++;
+				}
+			}
+			bagArray = tempArray;
+		}
+	}
+	public boolean contains(T item) {
+		for (int i = 0; i < bagArray.length; i++) {
+			if (bagArray[i].equals(item)){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public int count(T item) {
+		int total = 0;
+		
+		for(int i = 0; i< bagArray.length;i++) {
+			if(bagArray[i].equals(item)) {
+				total ++;
+			}
+		}
+		return total;
+	}
+	public void printBag() {
+		System.out.println("The bag contains: ");
+		
+		for(int i = 0; i < bagArray.length; i++) {
+			System.out.println(bagArray[i] + " ");
+		}
+		System.out.println();
+	}
+}
