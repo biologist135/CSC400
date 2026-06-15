@@ -1,0 +1,52 @@
+macOS system files
+
+.DS_Store
+
+Eclipse project files
+
+.metadata/
+.settings/
+.classpath
+.project
+
+Java compiled files
+
+*.class
+
+Java build folders
+
+bin/
+build/
+out/
+target/
+
+Package files
+
+*.jar
+*.war
+*.ear
+
+Logs
+
+*.log
+
+Temporary files
+
+*.tmp
+*.temp
+
+IDE-specific files
+
+.idea/
+*.iml
+.vscode/
+
+JavaFX / local library folders, if stored locally
+
+lib/
+libs/
+
+Environment/config files
+
+.env
+.env.local
