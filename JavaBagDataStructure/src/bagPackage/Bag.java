@@ -10,6 +10,9 @@ public class Bag<T> {
 	}
 	// Adds an item to the bag by creating a new array that is one space larger.
 	public void add(T item) {
+		if(item == null) {
+			return;
+		}
 		Object[] tempArray = new Object[bagArray.length + 1];
 		
 		//Copies all current items into the temporary array.
@@ -74,8 +77,4 @@ public class Bag<T> {
 		System.out.println("The bag contains: ");
 		
 		for(int i = 0; i < bagArray.length; i++) {
-			System.out.println(bagArray[i] + " ");
-		}
-		System.out.println();
-	}
-}
+			System.out.println(bagArray[i] + " "

@@ -4,8 +4,10 @@ public class BagTest {
 
 	public static void main(String[] args) {
 		
-		//Creates an instance of the bag class using string values
+		//Creates two instances of the bag class using string values
 		Bag<String> groceryBag = new Bag<>();
+		Bag<String> otherBag = new Bag<>();
+		Bag<String> distinctBag = new Bag<>();
 		
 		//Adds several elements to the bag including duplicates "Apple" and "Banana"
 		groceryBag.add("Apple");
@@ -15,10 +17,38 @@ public class BagTest {
 		groceryBag.add("Banana");
 		groceryBag.add("Apple");
 		
-		//Prints the original bag.
-		System.out.println("Original bag:");
+		System.out.println("Grocery Bag's Items");
 		groceryBag.printBag();
 		
+		//Adds several elements to the other bag including duplicates like "Chicken"
+		otherBag.add("Chicken");
+		otherBag.add("Orange");
+		otherBag.add("Chicken");
+		otherBag.add("Apple");
+		otherBag.add("Canned Peas");
+		
+		System.out.println("Other Bag's Items");
+		otherBag.printBag();
+		
+		//Test the size method by printing the size of different bags.
+		System.out.println("Size of Grocery Bag: " + groceryBag.bagSize());
+		System.out.println("Size of Other Bag: " + otherBag.bagSize());
+		
+		//Test the merge method using mergeBags method.
+		groceryBag.mergeBags(otherBag);
+		
+		//Prints the merged grocery bag.
+		System.out.println("\nMerged Bag's Contents");
+		groceryBag.printBag();
+		System.out.println("Merged Bag Size: "+ groceryBag.bagSize());
+		
+		//Test the distinct method.
+		distinctBag = groceryBag.distinct();
+		System.out.println("\nDistinct items from merged bags contents");
+		distinctBag.printBag();
+		
+		/*
+		 * From previous assignment Demonstrating all other methods for the Bag ADT.
 		//Test the contains method.
 		System.out.println("Contains Apple? " + groceryBag.contains("Apple"));
 		System.out.println("Contains Grapes? " + groceryBag.contains("Grapes"));
@@ -51,7 +81,7 @@ public class BagTest {
 		//Checks the contains and count methods after removing the orange.
 		System.out.println("\nContains Orange after removal? " + groceryBag.contains("Orange"));
 		System.out.println("Count Orange after removal: "+ groceryBag.count("Orange"));
-			
+			*/
 	}
 
 }
