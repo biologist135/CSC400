@@ -77,44 +77,4 @@ public class Bag<T> {
 		System.out.println("The bag contains: ");
 		
 		for(int i = 0; i < bagArray.length; i++) {
-			System.out.println(bagArray[i] + " ");
-		}
-		System.out.println();
-	}
-	
-	//Gets the size of the bag 
-	public int bagSize() {
-		return bagArray.length;
-	}
-	
-	//Merges two bags into one bag.
-	public void mergeBags(Bag<T> otherBag ) {
-		Object[] tempArray = new Object[this.bagSize()+ otherBag.bagSize()];
-		int currIndex = 0;
-		
-		for(int i = 0; i < this.bagSize(); i++) {
-			tempArray[currIndex] = this.bagArray[i];
-			currIndex++;
-		}
-		for(int i = 0; i < otherBag.bagSize(); i++ ) {
-			tempArray[currIndex] = otherBag.bagArray[i];
-			currIndex++;
-		}
-		this.bagArray = tempArray;
-	}
-	
-	//Takes unique items out of a bag and inputs them into a new bag.
-	@SuppressWarnings("unchecked")
-	public Bag<T> distinct(){
-		Bag<T> distinctBag = new Bag<>();
-		
-		for (int i = 0; i < bagArray.length; i++) {
-			T currentItem = (T) bagArray[i];
-			
-			if(!distinctBag.contains(currentItem)) {
-				distinctBag.add(currentItem);
-			}
-		}
-		return distinctBag;
-	}
-}
+			System.out.println(bagArray[i] + " "
